@@ -1,0 +1,3 @@
+== Omniauth Example
+
+El ejemplo de omniauth para el Super Happy Dev House Tijuana

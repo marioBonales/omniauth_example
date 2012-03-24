@@ -1,0 +1,17 @@
+<p>
+  <b>Name:</b>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @pet.pet_type %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @pet.email %>
+</p>
+
+<%= link_to 'Edit', edit_pet_path(@pet) if @pet.user == current_user %>
+<%= link_to 'Back', pets_path %>

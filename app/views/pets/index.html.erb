@@ -1,0 +1,27 @@
+<h1>Listing pets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pets.each do |pet| %>
+  <tr>
+    <td><%= pet.name %></td>
+    <td><%= pet.pet_type %></td>
+    <td><%= pet.email %></td>
+    <td><%= link_to 'Show', pet %></td>
+    <td><%= link_to 'Edit', edit_pet_path(pet) if pet.user == current_user %></td>
+    <td><%= link_to 'Destroy', pet, confirm: 'Are you sure?', method: :delete if pet.user == current_user%></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pet', new_pet_path %>
